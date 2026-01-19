@@ -12,6 +12,6 @@ public class PrikazPomoc implements IPrikaz {
     }
 
     public String getNazev() {
-        return "jdi";
+        return "pomoc";
     }
 }

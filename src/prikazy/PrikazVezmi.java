@@ -12,6 +12,6 @@ public class PrikazVezmi implements IPrikaz {
     }
 
     public String getNazev() {
-        return "jdi";
+        return "vezmi";
     }
 }

@@ -12,6 +12,6 @@ public class PrikazKonec implements IPrikaz {
     }
 
     public String getNazev() {
-        return "jdi";
+        return "konec";
     }
 }

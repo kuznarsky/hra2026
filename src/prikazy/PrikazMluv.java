@@ -12,6 +12,6 @@ public class PrikazMluv implements IPrikaz {
     }
 
     public String getNazev() {
-        return "jdi";
+        return "mluv";
     }
 }

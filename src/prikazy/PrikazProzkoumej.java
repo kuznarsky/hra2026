@@ -12,6 +12,6 @@ public class PrikazProzkoumej implements IPrikaz {
     }
 
     public String getNazev() {
-        return "jdi";
+        return "prozkoumej";
     }
 }
