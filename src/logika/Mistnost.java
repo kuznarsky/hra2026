@@ -29,4 +29,16 @@ public class Mistnost {
     public Predmet najdiPredmet(String nazevPredmetu) {
         return null;
     }
+
+    public Predmet odeberPredmet(String nazevPredmetu) {
+        return null;
+    }
+
+    public void vlozPostavu(Postava postava) {
+        //
+    }
+
+    public Postava getPostava() {
+        return null;
+    }
 }
