@@ -1,3 +1,5 @@
+package prikazy;
+
 public class SeznamPrikazu {
 
     public void vlozPrikaz(IPrikaz prikaz) {
