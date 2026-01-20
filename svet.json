@@ -33,5 +33,39 @@
     }
   },
   {
+    "nazev": "Kancelar_velitele",
+    "popis": "",
+    "vychody": {
+      "jih": "Temna_chodba"
+    }
+  },
+  {
+    "nazev": "Zbrojnice",
+    "popis": "",
+    "vychody": {
+      "sever": "Cela",
+      "jih": "Straznice"
+    }
+  },
+  {
+    "nazev": "Straznice",
+    "popis": "",
+    "vychody": {
+      "sever": "Zbrojnice",
+      "vychod": "Nadvori"
+    }
+  },
+  {
+    "nazev": "Nadvori",
+    "popis": "",
+    "vychody": {
+      "zapad": "Straznice",
+      "vychod": "Svoboda"
+    }
+  },
+  {
+    "nazev": "Svoboda",
+    "popis": "",
+    "vychody": {}
   }
 ]
