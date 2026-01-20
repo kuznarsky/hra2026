@@ -1,25 +1,33 @@
 package logika;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Mistnost {
+    private String nazev;
+    private String popis;
+    private Map<String, Mistnost> vychody;
 
     public Mistnost(String nazev, String popis) {
-        //
+        this.nazev = nazev;
+        this.popis = popis;
+        this.vychody = new HashMap<>();
     }
 
     public void setVychod(String smer, Mistnost vedlejsi) {
-        //
+        vychody.put(smer, vedlejsi);
     }
 
     public Mistnost vratVychod(String smer) {
-        return null;
+        return vychody.get(smer);
     }
 
     public String getNazev() {
-        return "";
+        return nazev;
     }
 
     public String dlouhyPopis() {
-        return "";
+        return popis;
     }
 
     public void vlozPredmet(Predmet predmet) {
