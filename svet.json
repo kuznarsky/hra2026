@@ -3,7 +3,35 @@
     "nazev": "Cela",
     "popis": "",
     "vychody": {
-
+      "sever": "Temna_chodba",
+      "jih": "Zbrojnice"
     }
+  },
+  {
+    "nazev": "Temna_chodba",
+    "popis": "",
+    "vychody": {
+      "jih": "Cela",
+      "zapad": "Kuchyne",
+      "vychod": "Hladomorna",
+      "sever": "Kancelar_velitele"
+    }
+  },
+  {
+    "nazev": "Kuchyne",
+    "popis": "",
+    "vychody": {
+      "vychod": "Temna_chodba",
+      "sever": "Spiz"
+    }
+  },
+  {
+    "nazev": "Hladomorna",
+    "popis": "",
+    "vychody": {
+      "zapad": "Temna_chodba"
+    }
+  },
+  {
   }
 ]
