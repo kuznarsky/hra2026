@@ -49,4 +49,5 @@ public class Mistnost {
     public Postava getPostava() {
         return null;
     }
+
 }
