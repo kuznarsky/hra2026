@@ -1,9 +1,14 @@
 package logika;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import javax.swing.*;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.Reader;
+import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +22,19 @@ public class TvorbaSveta {
         Gson gson = new Gson();
         List<MistnostData> dataSeznam;
         try (Reader reader = new FileReader(cestaKSouboru)) {
-            dataSeznam = gson.fromJson(reader)
+          Type listType = new TypeToken<List<MistnostData>>(){}.getType();
+            dataSeznam = gson.fromJson(reader, listType);
+        } catch (IOException e) {
+            System.err.println("Chyba pri cteni souboru: " + e.getMessage());
+            return null;
         }
+
+        Map<String, Mistnost> hotoveMistnosti = new HashMap<>();
+
+        for (MistnostData data : dataSeznam) {
+            Mistnost nova = new Mistnost(data.nazev, data.popis);
+            hotoveMistnosti.put(data.nazev, nova);
+        }
+        return hotoveMistnosti.get(dataSeznam.get(0).nazev);
     }
 }
