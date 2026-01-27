@@ -3,6 +3,8 @@ package main;
 import logika.Mistnost;
 import logika.TvorbaSveta;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         TvorbaSveta tvorba = new TvorbaSveta();
@@ -11,11 +13,8 @@ public class Main {
 
         if (aktualniMistnost == null) {
             System.out.println("Nepodarilo se nacist svet");
-        } else {
-            System.out.println(aktualniMistnost.getNazev());
+            return;
         }
-
-
 
     }
 }
