@@ -1,9 +1,8 @@
 package logika;
 
-import prikazy.SeznamPrikazu;
+import prikazy.*;
 
 public class Hra {
-
     private SeznamPrikazu platnePrikazy;
     private Mistnost aktualniMistnost;
     private Batoh batohHrace;
@@ -11,7 +10,7 @@ public class Hra {
 
     public Hra() {
         platnePrikazy = new SeznamPrikazu();
-        batohHrace = new Batoh(10); // nvm
+        batohHrace = new Batoh(15);
         zalozHru();
     }
 

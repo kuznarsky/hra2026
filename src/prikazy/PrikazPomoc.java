@@ -2,13 +2,13 @@ package prikazy;
 import logika.Hra;
 
 public class PrikazPomoc implements IPrikaz {
-    private Hra hra;
-    public PrikazPomoc(Hra hra) {
-        this.hra = hra;
+    private SeznamPrikazu seznam;
+    public PrikazPomoc(SeznamPrikazu seznam) {
+        this.seznam = seznam;
     }
 
     public String proved(String[] parametry) {
-        return "";
+        return "Tvym ukolem je utect z hradu.\n" + "Muzes zadavat tyto prikazy: " + seznam.vratSeznamPrikazu();
     }
 
     public String getNazev() {

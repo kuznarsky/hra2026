@@ -8,7 +8,8 @@ public class PrikazKonec implements IPrikaz {
     }
 
     public String proved(String[] parametry) {
-        return "";
+        hra.setKonecHry(true);
+        return "Hra ukoncena uzivatelem";
     }
 
     public String getNazev() {

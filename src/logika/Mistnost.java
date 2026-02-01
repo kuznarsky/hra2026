@@ -46,7 +46,7 @@ public class Mistnost {
         //
     }
 
-    public Postava getPostava() {
+    public Postava getPostava(String jmeno) {
         return null;
     }
 
