@@ -50,4 +50,7 @@ public class Mistnost {
         return null;
     }
 
+    public String seznamVychodu() {
+        return String.join(" ", vychody.keySet());
+    }
 }

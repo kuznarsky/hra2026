@@ -21,6 +21,7 @@ public class TvorbaSveta {
     public Mistnost vytvorSvetZeSouboru(String cestaKSouboru) {
         Gson gson = new Gson();
         List<MistnostData> dataSeznam;
+
         try (Reader reader = new FileReader(cestaKSouboru)) {
           Type listType = new TypeToken<List<MistnostData>>(){}.getType();
             dataSeznam = gson.fromJson(reader, listType);
@@ -34,6 +35,25 @@ public class TvorbaSveta {
         for (MistnostData data : dataSeznam) {
             Mistnost nova = new Mistnost(data.nazev, data.popis);
             hotoveMistnosti.put(data.nazev, nova);
+        }
+
+        for (MistnostData data : dataSeznam) {
+            Mistnost aktualni = hotoveMistnosti.get(data.nazev);
+
+            if (data.vychody != null) {
+                for (Map.Entry<String, String> entry : data.vychody.entrySet()) {
+                    String smer = entry.getKey();
+                    String nazevCile = entry.getValue();
+
+                    Mistnost cilova = hotoveMistnosti.get(nazevCile);
+
+                    if (cilova != null) {
+                        aktualni.setVychod(smer, cilova);
+                    } else {
+                        System.out.println("Cílová místnost " + nazevCile + " neexistuje");
+                    }
+                }
+            }
         }
         return hotoveMistnosti.get(dataSeznam.get(0).nazev);
     }
