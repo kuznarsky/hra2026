@@ -64,6 +64,13 @@
     }
   },
   {
+    "nazev": "Spiz",
+    "popis": "",
+    "vychody": {
+      "jih": "Kuchyne"
+    }
+  },
+  {
     "nazev": "Svoboda",
     "popis": "",
     "vychody": {}
