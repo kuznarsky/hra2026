@@ -1,20 +1,23 @@
 package logika;
 
 public class Postava {
+    private String jmeno;
+    private String dialog;
 
     public Postava(String jmeno, String dialog) {
-        //
+        this.jmeno = jmeno;
+        this.dialog = dialog;
     }
 
     public String getJmeno() {
-        return "";
+        return jmeno;
     }
 
     public String getDialog() {
-        return "";
+        return jmeno + ": \"" + dialog + "\"";
     }
 
-    public void setPozadovanyPredmet(Predmet predmet) {
+ //   public void setPozadovanyPredmet(Predmet predmet) {
         //
-    }
+  //   }
 }
