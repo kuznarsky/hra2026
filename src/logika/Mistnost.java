@@ -29,7 +29,13 @@ public class Mistnost {
     }
 
     public String dlouhyPopis() {
-        return popis;
+        return "\n--------------\n" +
+                "Jsi v lokaci: " + nazev + "\n" +
+                "Popis: " + popis + "\n" +
+                "Vychody: " + seznamVychodu() + "\n" +
+                "Predmety: " + seznamPredmetu() + "\n" +
+                "Postavy: " + seznamPostav() +
+                "\n----------------------";
     }
 
     public void vlozPredmet(Predmet predmet) {
@@ -37,11 +43,11 @@ public class Mistnost {
     }
 
     public Predmet najdiPredmet(String nazevPredmetu) {
-        return predmety.get(nazev);
+        return predmety.get(nazevPredmetu);
     }
 
     public Predmet odeberPredmet(String nazevPredmetu) {
-        return predmety.remove(nazev);
+        return predmety.remove(nazevPredmetu.toLowerCase());
     }
 
     public void vlozPostavu(Postava postava) {
@@ -54,5 +60,13 @@ public class Mistnost {
 
     public String seznamVychodu() {
         return String.join(" ", vychody.keySet());
+    }
+
+    public String seznamPredmetu() {
+        return String.join(" ", predmety.keySet());
+    }
+
+    public String seznamPostav() {
+        return String.join(" ", postavy.keySet());
     }
 }

@@ -1,43 +1,25 @@
 package main;
 
-import logika.Mistnost;
-import logika.TvorbaSveta;
+
+import logika.Hra;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        TvorbaSveta tvorba = new TvorbaSveta();
+        Hra hra = new Hra();
+        Scanner scanner = new Scanner(System.in);
 
-        Mistnost aktualniMistnost = tvorba.vytvorSvetZeSouboru("svet.json");
+        System.out.println(hra.vratUvitani());
 
-        if (aktualniMistnost == null) {
-            System.out.println("Nepodarilo se nacist svet");
-            return;
+        while (!hra.konecHry()) {
+            System.out.println("\n> ");
+            String radek = scanner.nextLine().trim();
+
+            if (radek.isEmpty()) continue;
+
+            String odpoved = hra.zpracujPrikaz(radek.toLowerCase());
+            System.out.println(odpoved);
         }
-
-        Scanner sc = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("\n---------------------");
-            System.out.println("Jsi v: " + aktualniMistnost.getNazev());
-            System.out.println(aktualniMistnost.dlouhyPopis());
-            System.out.println("Vychody: " + aktualniMistnost.seznamVychodu());
-            System.out.println("Zadej smer (nebo 'konec'): ");
-
-            String vstup = sc.nextLine().trim();
-
-            if (vstup.equals("konec")) break;
-
-            Mistnost novaMistnost = aktualniMistnost.vratVychod(vstup);
-
-            if (novaMistnost == null) {
-                System.out.println("-> Timto smerem nejde jit");
-            } else {
-                aktualniMistnost = novaMistnost;
-            }
-        }
-
-        System.out.println("Hra ukoncena.");
     }
 }
