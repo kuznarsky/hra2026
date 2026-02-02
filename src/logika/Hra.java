@@ -5,16 +5,16 @@ import prikazy.*;
 public class Hra {
     private SeznamPrikazu platnePrikazy;
     private Mistnost aktualniMistnost;
-    private Batoh batohHrace;
+    private Batoh batoh;
     private boolean konecHry = false;
 
     public Hra() {
         platnePrikazy = new SeznamPrikazu();
-        batohHrace = new Batoh(15);
-        zalozHru();
+        batoh = new Batoh(15);
+        zalozSvet();
     }
 
-    private void zalozHru() {
+    private void zalozSvet() {
         //
     }
 
@@ -47,6 +47,6 @@ public class Hra {
     }
 
     public Batoh getBatoh() {
-        return batohHrace;
+        return batoh;
     }
 }

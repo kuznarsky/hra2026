@@ -7,6 +7,8 @@ public class Mistnost {
     private String nazev;
     private String popis;
     private Map<String, Mistnost> vychody;
+    private Map<String, Predmet> predmety = new HashMap<>();
+    private Map<String, Postava> postavy = new HashMap<>();
 
     public Mistnost(String nazev, String popis) {
         this.nazev = nazev;
@@ -31,23 +33,23 @@ public class Mistnost {
     }
 
     public void vlozPredmet(Predmet predmet) {
-        //
+        predmety.put(predmet.getNazev(), predmet);
     }
 
     public Predmet najdiPredmet(String nazevPredmetu) {
-        return null;
+        return predmety.get(nazev);
     }
 
     public Predmet odeberPredmet(String nazevPredmetu) {
-        return null;
+        return predmety.remove(nazev);
     }
 
     public void vlozPostavu(Postava postava) {
-        //
+        postavy.put(postava.getJmeno(), postava);
     }
 
     public Postava getPostava(String jmeno) {
-        return null;
+        return postavy.get(jmeno);
     }
 
     public String seznamVychodu() {
