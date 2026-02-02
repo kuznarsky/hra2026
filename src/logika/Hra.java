@@ -10,7 +10,7 @@ public class Hra {
 
     public Hra() {
         platnePrikazy = new SeznamPrikazu();
-        batoh = new Batoh(15);
+        batoh = new Batoh(10);
         zalozSvet();
     }
 

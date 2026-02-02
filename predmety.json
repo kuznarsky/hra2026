@@ -1,0 +1,51 @@
+[
+  {
+    "nazev": "paklic",
+    "popis": "",
+    "vaha": 2,
+    "prenositelny": true,
+    "lokace": "Cela"
+  },
+  {
+    "nazev": "kamen",
+    "popis": "",
+    "vaha": 100,
+    "prenositelny": false,
+    "lokace": "Cela"
+  },
+  {
+    "nazev": "maso",
+    "popis": "",
+    "vaha": 2,
+    "prenositelny": true,
+    "lokace": "Kuchyne"
+  },
+  {
+    "nazev": "mec",
+    "popis": "",
+    "vaha": 5,
+    "prenositelny": true,
+    "lokace": "Zbrojnice"
+  },
+  {
+    "nazev": "klic",
+    "popis": "",
+    "vaha": 2,
+    "prenositelny": true,
+    "lokace": "Kancelar_velitele"
+  },
+  {
+    "nazev": "truhla",
+    "popis": "",
+    "vaha": 100,
+    "prenositelny": false,
+    "lokace": "Spiz"
+  },
+  {
+    "nazev": "dopis",
+    "popis": "",
+    "vaha": 1,
+    "prenositelny": true,
+    "lokace": "Hladomorna"
+  }
+]
