@@ -18,7 +18,15 @@ public class TvorbaSveta {
         String popis;
         Map<String, String> vychody;
     }
-    public Mistnost vytvorSvetZeSouboru(String cestaKSouboru) {
+
+    private class PredmetData {
+        String nazev;
+        String popis;
+        int vaha;
+        boolean prenositelny;
+        String lokace;
+    }
+    public Mistnost vytvorSvetZeSouboru(String cestaKSouboru, String cestaPredmety) {
         Gson gson = new Gson();
         List<MistnostData> dataSeznam;
 
@@ -55,6 +63,25 @@ public class TvorbaSveta {
                 }
             }
         }
+
+        try (Reader reader = new FileReader(cestaPredmety)) {
+            Type listType = new TypeToken<List<PredmetData>>(){}.getType();
+            List<PredmetData> dataPredmety = gson.fromJson(reader, listType);
+
+            for (PredmetData data : dataPredmety) {
+                Mistnost cilovaMistnost = hotoveMistnosti.get(data.lokace);
+
+                if (cilovaMistnost != null) {
+                    Predmet novyPredmet = new Predmet(data.nazev, data.popis, data.prenositelny, data.vaha);
+                    cilovaMistnost.vlozPredmet(novyPredmet);
+                } else {
+                    System.err.println("Varovani: Predmet '" + data.nazev + "' ma neznamou lokaci: " + data.lokace);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Chyba pri nacitani predmetu: " + e.getMessage());
+        }
+
         return hotoveMistnosti.get(dataSeznam.get(0).nazev);
     }
 }
