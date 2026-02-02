@@ -18,7 +18,7 @@ public class Hra {
     private void zalozSvet() {
         TvorbaSveta tvorba = new TvorbaSveta();
 
-        this.aktualniMistnost = tvorba.vytvorSvetZeSouboru("svet.json", "predmety.json");
+        this.aktualniMistnost = tvorba.vytvorSvetZeSouboru("svet.json", "predmety.json", "postavy.json");
 
 
         if (this.aktualniMistnost == null) {
@@ -34,6 +34,7 @@ public class Hra {
         platnePrikazy.vlozPrikaz(new PrikazProzkoumej(this));
         platnePrikazy.vlozPrikaz(new PrikazMluv(this));
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
+        platnePrikazy.vlozPrikaz(new PrikazPouzij(this));
         platnePrikazy.vlozPrikaz(new PrikazPomoc(platnePrikazy));
     }
 

@@ -26,7 +26,14 @@ public class TvorbaSveta {
         boolean prenositelny;
         String lokace;
     }
-    public Mistnost vytvorSvetZeSouboru(String cestaKSouboru, String cestaPredmety) {
+
+    private class PostavaData {
+        String jmeno;
+        String dialog;
+        String lokace;
+        String typ;
+    }
+    public Mistnost vytvorSvetZeSouboru(String cestaKSouboru, String cestaPredmety, String postavySoubor) {
         Gson gson = new Gson();
         List<MistnostData> dataSeznam;
 
@@ -80,6 +87,21 @@ public class TvorbaSveta {
             }
         } catch (IOException e) {
             System.err.println("Chyba pri nacitani predmetu: " + e.getMessage());
+        }
+
+        try (Reader reader = new FileReader(postavySoubor)) {
+            Type listType = new TypeToken<List<PostavaData>>(){}.getType();
+            List<PostavaData> dataPostavy = gson.fromJson(reader, listType);
+
+            for (PostavaData data : dataPostavy) {
+                Mistnost cilova = hotoveMistnosti.get(data.lokace);
+                if (cilova != null) {
+                    Postava novaPostava = new Postava(data.jmeno, data.dialog, data.typ);
+                    cilova.vlozPostavu(novaPostava);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Chyba postav: " + e.getMessage());
         }
 
         return hotoveMistnosti.get(dataSeznam.get(0).nazev);

@@ -1,0 +1,20 @@
+[
+  {
+    "jmeno": "duch",
+    "dialog": "V kancelari velitele je klic ale pozor na psa",
+    "lokace": "Hladomorna",
+    "typ": "neutral"
+  },
+  {
+    "jmeno": "pes",
+    "dialog": "VRRRRR HAF ",
+    "lokace": "Kancelar_velitele",
+    "typ": "prekazka"
+  },
+  {
+    "jmeno": "dozorce",
+    "dialog": "tasi mec",
+    "lokace": "Straznice",
+    "typ": "nepritel"
+  }
+]
