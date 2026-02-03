@@ -8,13 +8,13 @@
   {
     "jmeno": "pes",
     "dialog": "VRRRRR HAF ",
-    "lokace": "Kancelar_velitele",
+    "lokace": "Kancelář velitele",
     "typ": "prekazka"
   },
   {
     "jmeno": "dozorce",
     "dialog": "tasi mec",
-    "lokace": "Straznice",
+    "lokace": "Strážnice",
     "typ": "nepritel"
   },
   {

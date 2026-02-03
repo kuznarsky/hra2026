@@ -28,7 +28,7 @@ public class PrikazVezmi implements IPrikaz {
             return "To je moc tezke. Neprenositelny predmet";
         }
 
-        if (nazevVeci.equals("klic") && hra.getAktualniMistnost().getNazev().equals("Kancelar_velitele")) {
+        if (nazevVeci.equals("klíč") && hra.getAktualniMistnost().getNazev().equals("Kancelář velitele")) {
             Postava pes = hra.getAktualniMistnost().getPostava("pes");
 
             if (pes != null && pes.getTyp().equals("prekazka")) {
