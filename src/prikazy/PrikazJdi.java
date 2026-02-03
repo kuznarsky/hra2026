@@ -12,7 +12,7 @@ public class PrikazJdi implements IPrikaz {
 
     public String proved(String[] parametry) {
         if (parametry.length == 0) {
-            return "Musis zadat smer (napr. jdi sever)";
+            return "Musíte zadat směr (např. jdi sever)";
         }
 
         String smer = parametry[0];
@@ -20,34 +20,40 @@ public class PrikazJdi implements IPrikaz {
         Mistnost sousedni = aktualni.vratVychod(smer);
 
         if (sousedni == null) {
-            return "Tam se odsud jit neda";
+            return "Tam se odsud jít nedá";
         }
 
-        if (sousedni.getNazev().equals("Nadvori") && !hra.getBatoh().obsahujeVec("klic")) {
-            return "Dvere jsou zamcene. potrebujes klic";
+        if (sousedni.getNazev().equals("Nádvoří") && !hra.getBatoh().obsahujeVec("klíč")) {
+            return "Dveře jsou zamčené";
+        }
+
+        Postava zamcenacela = hra.getAktualniMistnost().getPostava("zamcenacela");
+
+        if (aktualni.getNazev().equals("Cela") && !zamcenacela.getTyp().equals("neutral")) {
+            return "Cela je zamčená";
         }
 
         hra.setAktualniMistnost(sousedni);
         String vypis = sousedni.dlouhyPopis();
 
-        if (sousedni.getNazev().equals("Straznice")) {
+        if (sousedni.getNazev().equals("Strážnice")) {
             Postava dozorce = sousedni.getPostava("dozorce");
-            if (dozorce != null && !hra.getBatoh().obsahujeVec("mec")) {
+            if (dozorce != null && !hra.getBatoh().obsahujeVec("meč")) {
                 hra.setKonecHry(true);
                 return vypis + "\n\n!! POZOR !!\n" +
                         dozorce.getDialog() + "\n" +
-                        "Nemas zbran a dozorce te chytil" +
+                        "Nemáš zbraň a dozorce te chytil" +
                         "--- KONEC HRY ---";
-            } else if (dozorce != null && hra.getBatoh().obsahujeVec("mec")) {
-                return vypis + "\n\nTasis svuj mec, cesta je volna";
+            } else if (dozorce != null && hra.getBatoh().obsahujeVec("meč")) {
+                return vypis + "\n\nTasíš svůj meč, cesta je volná";
             }
         }
 
         if (sousedni.getNazev().equals("Svoboda")) {
             hra.setKonecHry(true);
             return "\n*********************\n" +
-                    "Prosel si branou ven z hradu.\n" +
-                    "Jsi vitez. GG\n" +
+                    "Prošel si bránou ven z hradu.\n" +
+                    "Jsi vítěz. GG\n" +
                     "****************";
         }
 

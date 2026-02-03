@@ -1,42 +1,42 @@
 [
   {
     "nazev": "Cela",
-    "popis": "temna debilni cela",
+    "popis": "",
     "vychody": {
-      "sever": "Temna_chodba",
+      "sever": "Temná chodba",
       "jih": "Zbrojnice"
     }
   },
   {
-    "nazev": "Temna_chodba",
+    "nazev": "Temná chodba",
     "popis": "",
     "vychody": {
+      "sever": "Kancelář velitele",
+      "východ": "Hladomorna",
       "jih": "Cela",
-      "zapad": "Kuchyne",
-      "vychod": "Hladomorna",
-      "sever": "Kancelar_velitele"
+      "západ": "Kuchyně"
     }
   },
   {
-    "nazev": "Kuchyne",
+    "nazev": "Kuchyně",
     "popis": "",
     "vychody": {
-      "vychod": "Temna_chodba",
-      "sever": "Spiz"
+      "sever": "Spíž",
+      "východ": "Temná chodba"
     }
   },
   {
     "nazev": "Hladomorna",
     "popis": "",
     "vychody": {
-      "zapad": "Temna_chodba"
+      "západ": "Temná chodba"
     }
   },
   {
-    "nazev": "Kancelar_velitele",
+    "nazev": "Kancelář velitele",
     "popis": "",
     "vychody": {
-      "jih": "Temna_chodba"
+      "jih": "Temná chodba"
     }
   },
   {
@@ -44,30 +44,30 @@
     "popis": "",
     "vychody": {
       "sever": "Cela",
-      "jih": "Straznice"
+      "jih": "Strážnice"
     }
   },
   {
-    "nazev": "Straznice",
+    "nazev": "Strážnice",
     "popis": "",
     "vychody": {
       "sever": "Zbrojnice",
-      "vychod": "Nadvori"
+      "východ": "Nádvoří"
     }
   },
   {
-    "nazev": "Nadvori",
+    "nazev": "Nádvoří",
     "popis": "",
     "vychody": {
-      "zapad": "Straznice",
-      "vychod": "Svoboda"
+      "východ": "Svoboda",
+      "západ": "Strážnice"
     }
   },
   {
-    "nazev": "Spiz",
+    "nazev": "Spíž",
     "popis": "",
     "vychody": {
-      "jih": "Kuchyne"
+      "jih": "Kuchyně"
     }
   },
   {

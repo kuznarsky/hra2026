@@ -16,5 +16,11 @@
     "dialog": "tasi mec",
     "lokace": "Straznice",
     "typ": "nepritel"
+  },
+  {
+    "jmeno": "zamcenacela",
+    "dialog": "",
+    "lokace": "Cela",
+    "typ": "prekazka"
   }
 ]

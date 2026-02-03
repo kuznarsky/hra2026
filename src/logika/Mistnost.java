@@ -32,8 +32,8 @@ public class Mistnost {
         return "\n--------------\n" +
                 "Jsi v lokaci: " + nazev + "\n" +
                 "Popis: " + popis + "\n" +
-                "Vychody: " + seznamVychodu() + "\n" +
-                "Predmety: " + seznamPredmetu() + "\n" +
+                "Východy: " + seznamVychodu() + "\n" +
+                "Předměty: " + seznamPredmetu() + "\n" +
                 "Postavy: " + seznamPostav() +
                 "\n----------------------";
     }
