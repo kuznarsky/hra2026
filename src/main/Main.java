@@ -23,3 +23,5 @@ public class Main {
         }
     }
 }
+
+// v tomhle commitu nic jinýho není, všechny příkazy mi fungují (a další věci v úkolu č. 5), jen jsem to neuvedl v názvech těch minulých commitů tak jen aby bylo jasno
