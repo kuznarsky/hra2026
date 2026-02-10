@@ -8,7 +8,7 @@ public class PrikazPomoc implements IPrikaz {
     }
 
     public String proved(String[] parametry) {
-        return "Tvym ukolem je utect z hradu.\n" + "Muzes zadavat tyto prikazy: " + seznam.vratSeznamPrikazu();
+        return seznam.vratSeznamPrikazu();
     }
 
     public String getNazev() {

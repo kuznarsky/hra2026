@@ -36,6 +36,7 @@ public class Hra {
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
         platnePrikazy.vlozPrikaz(new PrikazPouzij(this));
         platnePrikazy.vlozPrikaz(new PrikazPomoc(platnePrikazy));
+        platnePrikazy.vlozPrikaz(new PrikazNapoveda(platnePrikazy));
     }
 
     public String zpracujPrikaz(String radek) {
