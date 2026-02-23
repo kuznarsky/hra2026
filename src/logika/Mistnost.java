@@ -67,6 +67,13 @@ public class Mistnost {
     }
 
     public String seznamPostav() {
-        return String.join(" ", postavy.keySet());
+        String seznam = "";
+        for (String jmeno : postavy.keySet()) {
+            if (!jmeno.equals("zamcenacela")) {
+                seznam += jmeno + " ";
+            }
+        }
+        return seznam.trim().isEmpty() ? "" : seznam;
+        //return String.join(" ", postavy.keySet());
     }
 }

@@ -16,7 +16,11 @@ public class Main {
             System.out.println("\n> ");
             String radek = scanner.nextLine().trim();
 
-            if (radek.isEmpty()) continue;
+           // if (radek.isEmpty()) continue;
+            if (radek == null || radek.trim().isEmpty()) {
+                System.out.println("Musíš zadat nějaký příkaz! Napiš pomoc pro seznam příkazů");
+                continue;
+            }
 
             String odpoved = hra.zpracujPrikaz(radek.toLowerCase());
             System.out.println(odpoved);
