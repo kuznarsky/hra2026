@@ -1,3 +1,8 @@
+/**
+ * Třída Hra řídí celou hru. Inicializuje svět, udržuje aktuální stav, zpracovává příkazy
+ *
+ * @author Lukáš Kuzňarský
+ */
 package logika;
 
 import prikazy.*;

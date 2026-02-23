@@ -1,3 +1,9 @@
+/**
+ * Třída Místnost představuje jednu lokaci ve světě, udržuje informace o popisu, sousedních místnostech
+ * a kolekce předmětů a postav, které se v ní nachází
+ *
+ * @author Lukáš Kuzňarský
+ */
 package logika;
 
 import java.util.HashMap;
