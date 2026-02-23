@@ -44,6 +44,6 @@ public class PrikazPouzij implements IPrikaz {
     }
 
     public String getNazev() {
-        return "pouzij";
+        return "použij";
     }
 }

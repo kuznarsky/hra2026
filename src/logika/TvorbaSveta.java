@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import javax.swing.*;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -38,10 +39,14 @@ public class TvorbaSveta {
         List<MistnostData> dataSeznam;
 
         try (Reader reader = new FileReader(cestaKSouboru)) {
-          Type listType = new TypeToken<List<MistnostData>>(){}.getType();
+            Type listType = new TypeToken<List<MistnostData>>() {
+            }.getType();
             dataSeznam = gson.fromJson(reader, listType);
+        } catch (FileNotFoundException e) {
+            System.err.println("KRITICKÁ CHYBA: Nemohu najít soubor mapy '" + cestaKSouboru);
+            return new Mistnost("Prázdnota", "Svět se nepodařilo načíst.");
         } catch (IOException e) {
-            System.err.println("Chyba pri cteni souboru: " + e.getMessage());
+            System.err.println("Chyba při čtení souboru: " + e.getMessage());
             return null;
         }
 
