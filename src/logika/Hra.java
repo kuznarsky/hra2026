@@ -44,6 +44,12 @@ public class Hra {
         platnePrikazy.vlozPrikaz(new PrikazNapoveda(platnePrikazy));
     }
 
+    /**
+     * Zpracuje textový příkaz zadaný uživatelem
+     * @param radek Celý text který napsal uživatel
+     * @return Textová odpověď hry
+     */
+
     public String zpracujPrikaz(String radek) {
         String[] slova = radek.split("\\s+");
         String nazevPrikazu = slova[0];
