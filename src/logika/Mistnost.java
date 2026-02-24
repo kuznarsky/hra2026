@@ -22,10 +22,20 @@ public class Mistnost {
         this.vychody = new HashMap<>();
     }
 
+    /**
+     * přidá východ do jiné místnosti
+     * @param smer na jaké straně bude místnost
+     * @param vedlejsi název vedlejší místnosti
+     */
     public void setVychod(String smer, Mistnost vedlejsi) {
         vychody.put(smer, vedlejsi);
     }
 
+    /**
+     * vrátí název sousední místnosti v daném směru
+     * @param smer na jaké straně je místnost
+     * @return
+     */
     public Mistnost vratVychod(String smer) {
         return vychody.get(smer);
     }
