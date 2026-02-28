@@ -35,13 +35,13 @@ public class Mistnost {
     }
 
     public String dlouhyPopis() {
-        return "\n--------------\n" +
-                "Jsi v lokaci: " + nazev + "\n" +
+        return "\n**************************\n" +
+                "Jste v lokaci: " + nazev + "\n" +
                 "Popis: " + popis + "\n" +
                 "Východy: " + seznamVychodu() + "\n" +
                 "Předměty: " + seznamPredmetu() + "\n" +
                 "Postavy: " + seznamPostav() +
-                "\n----------------------";
+                "\n*************************";
     }
 
     public void vlozPredmet(Predmet predmet) {

@@ -43,7 +43,7 @@ public class TvorbaSveta {
             }.getType();
             dataSeznam = gson.fromJson(reader, listType);
         } catch (FileNotFoundException e) {
-            System.err.println("KRITICKÁ CHYBA: Nemohu najít soubor mapy '" + cestaKSouboru);
+            System.err.println("KRITICKÁ CHYBA: Nemohu najít soubor mapy" + cestaKSouboru);
             return new Mistnost("Prázdnota", "Svět se nepodařilo načíst.");
         } catch (IOException e) {
             System.err.println("Chyba při čtení souboru: " + e.getMessage());
@@ -87,11 +87,11 @@ public class TvorbaSveta {
                     Predmet novyPredmet = new Predmet(data.nazev, data.popis, data.prenositelny, data.vaha);
                     cilovaMistnost.vlozPredmet(novyPredmet);
                 } else {
-                    System.err.println("Varovani: Predmet '" + data.nazev + "' ma neznamou lokaci: " + data.lokace);
+                    System.err.println("Varování: Předmět '" + data.nazev + "' má neznámou lokaci: " + data.lokace);
                 }
             }
         } catch (IOException e) {
-            System.err.println("Chyba pri nacitani predmetu: " + e.getMessage());
+            System.err.println("Chyba při načítání souboru: " + e.getMessage());
         }
 
         try (Reader reader = new FileReader(postavySoubor)) {

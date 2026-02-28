@@ -8,10 +8,10 @@ public class PrikazNapoveda implements IPrikaz {
     }
 
     public String proved(String[] parametry) {
-        return "Tvym ukolem je utect z hradu. Příkazy zobrazíš příkazem 'pomoc'.";
+        return "Tvým úkolem je útect z hradu. Příkazy zobrazíš příkazem 'pomoc'.";
     }
 
     public String getNazev() {
-        return "napoveda";
+        return "nápověda";
     }
 }

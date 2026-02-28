@@ -27,7 +27,7 @@ public class Hra {
 
 
         if (this.aktualniMistnost == null) {
-            System.err.println("CHYBA: SVET SE NENACETL");
+            System.err.println("CHYBA: SVĚT SE NENAČETL");
             return;
         }
     }
@@ -63,12 +63,12 @@ public class Hra {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(nazevPrikazu);
             return prikaz.proved(parametry);
         } else {
-            return "Tento prikaz neexistuje, zkus prikaz 'pomoc'";
+            return "Tento příkaz neexistuje. Pokud potřebujete pomoct, zkuste příkaz 'pomoc'";
         }
     }
 
     public String vratUvitani() {
-        return "Vitej ve hre Utek z Temne veze" + aktualniMistnost.dlouhyPopis();
+        return "Vítejte ve hře Útěk z Temné věže!" + aktualniMistnost.dlouhyPopis();
     }
 
     public String vratEpilog() {

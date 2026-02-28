@@ -10,13 +10,13 @@ public class PrikazMluv implements IPrikaz {
     }
 
     public String proved(String[] parametry) {
-        if (parametry.length == 0) return "Neni s kym mluvit";
+        if (parametry.length == 0) return "Není s kým mluvit.";
 
         String jmeno = parametry[0];
         Postava postava = hra.getAktualniMistnost().getPostava(jmeno);
 
         if (postava == null) {
-            return "Nikdo takovy tu neni";
+            return "Nikdo takový tu není.";
         }
 
         return postava.getDialog();

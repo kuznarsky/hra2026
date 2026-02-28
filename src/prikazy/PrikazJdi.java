@@ -42,7 +42,7 @@ public class PrikazJdi implements IPrikaz {
                 hra.setKonecHry(true);
                 return vypis + "\n\n!! POZOR !!\n" +
                         dozorce.getDialog() + "\n" +
-                        "Nemáš zbraň a dozorce te chytil" +
+                        "Nemáš zbraň a dozorce tě chytil" +
                         "--- KONEC HRY ---";
             } else if (dozorce != null && hra.getBatoh().obsahujeVec("meč")) {
                 return vypis + "\n\nTasíš svůj meč, cesta je volná";

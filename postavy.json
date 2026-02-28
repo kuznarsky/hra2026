@@ -1,7 +1,7 @@
 [
   {
     "jmeno": "duch",
-    "dialog": "V kancelari velitele je klic ale pozor na psa",
+    "dialog": "V kanceláři velitele je klíč, ale pozor na psa! Dostaneš se tam tak, že půjdeš zpět a pak na sever.",
     "lokace": "Hladomorna",
     "typ": "neutral"
   },
@@ -9,18 +9,18 @@
     "jmeno": "pes",
     "dialog": "VRRRRR HAF ",
     "lokace": "Kancelář velitele",
-    "typ": "prekazka"
+    "typ": "překážka"
   },
   {
     "jmeno": "dozorce",
-    "dialog": "tasi mec",
+    "dialog": "tasí meč",
     "lokace": "Strážnice",
-    "typ": "nepritel"
+    "typ": "nepřitel"
   },
   {
     "jmeno": "zamcenacela",
     "dialog": "",
     "lokace": "Cela",
-    "typ": "prekazka"
+    "typ": "překážka"
   }
 ]

@@ -18,7 +18,7 @@ public class Main {
 
            // if (radek.isEmpty()) continue;
             if (radek == null || radek.trim().isEmpty()) {
-                System.out.println("Musíš zadat nějaký příkaz! Napiš pomoc pro seznam příkazů");
+                System.out.println("Musíš zadat nějaký příkaz! Napiš pomoc pro seznam příkazů.");
                 continue;
             }
 
@@ -27,5 +27,3 @@ public class Main {
         }
     }
 }
-
-// v tomhle commitu nic jinýho není, všechny příkazy mi fungují (a další věci v úkolu č. 5), jen jsem to neuvedl v názvech těch minulých commitů tak jen aby bylo jasno

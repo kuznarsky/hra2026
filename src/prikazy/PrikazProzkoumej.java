@@ -22,10 +22,10 @@ public class PrikazProzkoumej implements IPrikaz {
 
         Predmet vec = hra.getAktualniMistnost().najdiPredmet(nazev);
         if (vec != null) {
-            return "Vidis: " + vec.getPopis();
+            return "Vidíš: " + vec.getPopis();
         }
 
-        return "Nic takoveho tu neni";
+        return "Nic takového tu není";
     }
 
     public String getNazev() {

@@ -38,9 +38,9 @@ public class Batoh {
 
     public String getSeznamVeci() {
         if (obsah.isEmpty()) {
-            return "Batoh je prazdny.";
+            return "Batoh je prázdný.";
         }
-        return "V batohu mas: " + String.join(", ", obsah.keySet()) + " (Vaha: " + aktualniVaha + "/" + kapacitaVahy + ")";
+        return "V batohu máte: " + String.join(", ", obsah.keySet()) + " (Váha: " + aktualniVaha + "/" + kapacitaVahy + ")";
     }
 
     public int getAktualniVaha() {

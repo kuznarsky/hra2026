@@ -10,20 +10,20 @@ public class PrikazPoloz implements IPrikaz {
     }
 
     public String proved(String[] parametry) {
-       if (parametry.length == 0) return "Nemas nic co by slo polozit";
+       if (parametry.length == 0) return "Nemáte nic, co by šlo položit";
 
        String nazevVeci = parametry[0];
         Predmet vec = hra.getBatoh().vyberVec(nazevVeci);
 
         if (vec == null) {
-            return "Takovou vec nemas";
+            return "Takovou věc nemáte";
         }
 
         hra.getAktualniMistnost().vlozPredmet(vec);
-        return "Polozil jsi " + nazevVeci + " na zem";
+        return "Položil/a jste " + nazevVeci + " na zem";
     }
 
     public String getNazev() {
-        return "poloz";
+        return "polož";
     }
 }
