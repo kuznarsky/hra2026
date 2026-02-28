@@ -13,6 +13,9 @@ public class Hra {
     private Batoh batoh;
     private boolean konecHry = false;
 
+    /**
+     * Vytvoří hru, inicializuje batoh a načte mapu světa
+     */
     public Hra() {
         platnePrikazy = new SeznamPrikazu();
         batoh = new Batoh(10);
@@ -49,7 +52,6 @@ public class Hra {
      * @param radek Celý text který napsal uživatel
      * @return Textová odpověď hry
      */
-
     public String zpracujPrikaz(String radek) {
         String[] slova = radek.split("\\s+");
         String nazevPrikazu = slova[0];
@@ -66,19 +68,22 @@ public class Hra {
             return "Tento příkaz neexistuje. Pokud potřebujete pomoct, zkuste příkaz 'pomoc'";
         }
     }
-
+    // vypíše úvítání
     public String vratUvitani() {
         return "Vítejte ve hře Útěk z Temné věže!" + aktualniMistnost.dlouhyPopis();
     }
 
+    // vypíše závěrečnou obrazovku
     public String vratEpilog() {
         return "";
     }
 
+    // vrátí informaci zda už skončila hra
     public boolean konecHry() {
         return konecHry;
     }
 
+    // ukončí hru
     public void setKonecHry(boolean konec) {
         this.konecHry = konec;
     }

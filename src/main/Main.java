@@ -1,11 +1,19 @@
+/**
+ * Hlavní spouštěcí třida hry
+ *
+ * @author Lukáš Kuzňarský
+ */
 package main;
-
 
 import logika.Hra;
 
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Vstupní bod programu, vytvoří instanci hry
+     * @param args Parametry (nevyužito)
+     */
     public static void main(String[] args) {
         Hra hra = new Hra();
         Scanner scanner = new Scanner(System.in);
