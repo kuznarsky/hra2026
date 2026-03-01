@@ -26,7 +26,7 @@ public class Hra {
     private void zalozSvet() {
         TvorbaSveta tvorba = new TvorbaSveta();
 
-        this.aktualniMistnost = tvorba.vytvorSvetZeSouboru("svet.json", "predmety.json", "postavy.json");
+        this.aktualniMistnost = tvorba.vytvorSvetZeSouboru("src\\svet.json", "src\\predmety.json", "src\\postavy.json");
 
 
         if (this.aktualniMistnost == null) {
