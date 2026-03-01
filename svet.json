@@ -1,7 +1,7 @@
 [
   {
     "nazev": "Cela",
-    "popis": "",
+    "popis": "Jsi v malé, vlhké cele. Cítíš chlad a beznaděj.",
     "vychody": {
       "sever": "Temná chodba",
       "jih": "Zbrojnice"
@@ -9,7 +9,7 @@
   },
   {
     "nazev": "Temná chodba",
-    "popis": "",
+    "popis": "Centrální chodba hradu. Je tu ticho, jen louče na stěnách prskají. Vedou odsud dveře na všechny strany.",
     "vychody": {
       "sever": "Kancelář velitele",
       "východ": "Hladomorna",
@@ -19,7 +19,7 @@
   },
   {
     "nazev": "Kuchyně",
-    "popis": "",
+    "popis": "Místnost plná vůní, ale také špinavého nádobí. Někde tu musí být jídlo.",
     "vychody": {
       "sever": "Spíž",
       "východ": "Temná chodba"
@@ -27,21 +27,21 @@
   },
   {
     "nazev": "Hladomorna",
-    "popis": "",
+    "popis": "Slepá ulička plná kostí. Vzduch se tu tetelí, jako by tu byl duch.",
     "vychody": {
       "západ": "Temná chodba"
     }
   },
   {
     "nazev": "Kancelář velitele",
-    "popis": "",
+    "popis": "Luxusně vybavená místnost. Na stole jsou mapy a možná i klíč. Pozor na psa!",
     "vychody": {
       "jih": "Temná chodba"
     }
   },
   {
     "nazev": "Zbrojnice",
-    "popis": "",
+    "popis": "Místnost se stojany na zbraně a brnění. Cítíš olej a železo.",
     "vychody": {
       "sever": "Cela",
       "jih": "Strážnice"
@@ -49,7 +49,7 @@
   },
   {
     "nazev": "Strážnice",
-    "popis": "",
+    "popis": "Místnost, kde odpočívají dozorci. Jediná cesta ven vede přes ně. Doufej, že máš zbraň.",
     "vychody": {
       "sever": "Zbrojnice",
       "východ": "Nádvoří"
@@ -57,7 +57,7 @@
   },
   {
     "nazev": "Nádvoří",
-    "popis": "",
+    "popis": "Venkovní prostor hradu. Čerstvý vzduch! Před tebou je už jen zamčená Hlavní brána.",
     "vychody": {
       "východ": "Svoboda",
       "západ": "Strážnice"
@@ -65,7 +65,7 @@
   },
   {
     "nazev": "Spíž",
-    "popis": "",
+    "popis": "Malá, chladná komůrka za kuchyní. Ideální místo pro schování zásob.",
     "vychody": {
       "jih": "Kuchyně"
     }
