@@ -2,13 +2,13 @@ Cílem této hry je utéct z temné věže. Hráč musí sbírat růžné předm
 
 Hráč může kdykoliv zobrazit všechny příkazy pomocí příkazu pomoc.
 
-jdi - jdi sever/jih/východ/západ    
+jdi - jdi sever/jih/vychod/zapad    
 konec   
 mluv - zobrazí zprávu od postavy pokud nějaká v místnosti je.   
-nápověda -  
-polož - položí předmět v inventáři  
+napoveda -  
+poloz - položí předmět v inventáři  
 pomoc - zobrazí příkazy     
-použij -    
+pouzij -    
 prozkoumej -    
 vezmi
     

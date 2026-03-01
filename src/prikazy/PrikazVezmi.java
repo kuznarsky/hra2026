@@ -28,10 +28,10 @@ public class PrikazVezmi implements IPrikaz {
             return "To je moc těžké. Nepřenositelný předmět";
         }
 
-        if (nazevVeci.equals("klíč") && hra.getAktualniMistnost().getNazev().equals("Kancelář velitele")) {
+        if (nazevVeci.equals("klic") && hra.getAktualniMistnost().getNazev().equals("Kancelar velitele")) {
             Postava pes = hra.getAktualniMistnost().getPostava("pes");
 
-            if (pes != null && pes.getTyp().equals("překážka")) {
+            if (pes != null && pes.getTyp().equals("prekazka")) {
                 return "Pokusil/a jste se vzít klíč a pes na vás zaútočil.";
             }
         }

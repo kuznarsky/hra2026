@@ -27,12 +27,12 @@ public class PrikazPouzij implements IPrikaz {
             }
         }
 
-        if (nazevVeci.equals("paklíč")) {
-            if (!hra.getBatoh().obsahujeVec("paklíč")) return "Nemáš paklíč. Možná ho zkuste najít?";
+        if (nazevVeci.equals("paklic")) {
+            if (!hra.getBatoh().obsahujeVec("paklic")) return "Nemáš paklíč. Možná ho zkuste najít?";
 
             Postava zamcenacela = hra.getAktualniMistnost().getPostava("zamcenacela");
             if (zamcenacela != null) {
-                hra.getBatoh().vyberVec("paklíč");
+                hra.getBatoh().vyberVec("paklic");
                 zamcenacela.setTyp("neutral");
                 return "Odemknuli jste celu";
             } else {
@@ -44,6 +44,6 @@ public class PrikazPouzij implements IPrikaz {
     }
 
     public String getNazev() {
-        return "použij";
+        return "pouzij";
     }
 }

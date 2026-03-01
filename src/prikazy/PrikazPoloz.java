@@ -24,6 +24,6 @@ public class PrikazPoloz implements IPrikaz {
     }
 
     public String getNazev() {
-        return "polož";
+        return "poloz";
     }
 }

@@ -7,6 +7,7 @@ package main;
 
 import logika.Hra;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         Hra hra = new Hra();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
         System.out.println(hra.vratUvitani());
 

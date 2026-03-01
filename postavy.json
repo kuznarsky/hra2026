@@ -8,19 +8,19 @@
   {
     "jmeno": "pes",
     "dialog": "VRRRRR HAF ",
-    "lokace": "Kancelář velitele",
-    "typ": "překážka"
+    "lokace": "Kancelar velitele",
+    "typ": "prekazka"
   },
   {
     "jmeno": "dozorce",
     "dialog": "tasí meč",
-    "lokace": "Strážnice",
-    "typ": "nepřitel"
+    "lokace": "Straznice",
+    "typ": "nepritel"
   },
   {
     "jmeno": "zamcenacela",
     "dialog": "",
     "lokace": "Cela",
-    "typ": "překážka"
+    "typ": "prekazka"
   }
 ]

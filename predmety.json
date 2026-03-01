@@ -1,13 +1,13 @@
 [
   {
-    "nazev": "paklíč",
+    "nazev": "paklic",
     "popis": "",
     "vaha": 2,
     "prenositelny": true,
     "lokace": "Cela"
   },
   {
-    "nazev": "kámen",
+    "nazev": "kamen",
     "popis": "",
     "vaha": 100,
     "prenositelny": false,
@@ -18,28 +18,28 @@
     "popis": "",
     "vaha": 2,
     "prenositelny": true,
-    "lokace": "Kuchyně"
+    "lokace": "Kuchyne"
   },
   {
-    "nazev": "meč",
+    "nazev": "mec",
     "popis": "",
     "vaha": 5,
     "prenositelny": true,
     "lokace": "Zbrojnice"
   },
   {
-    "nazev": "klíč",
+    "nazev": "klic",
     "popis": "",
     "vaha": 2,
     "prenositelny": true,
-    "lokace": "Kancelář velitele"
+    "lokace": "Kancelar velitele"
   },
   {
     "nazev": "truhla",
     "popis": "",
     "vaha": 100,
     "prenositelny": false,
-    "lokace": "Spíž"
+    "lokace": "Spiz"
   },
   {
     "nazev": "dopis",

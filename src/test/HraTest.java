@@ -20,10 +20,10 @@ public class HraTest {
 
     @Test
     public void testPlatnyPohyb() {
-        hra.zpracujPrikaz("vezmi paklíč");
-        hra.zpracujPrikaz("použij paklíč");
+        hra.zpracujPrikaz("vezmi paklic");
+        hra.zpracujPrikaz("pouzij paklic");
         hra.zpracujPrikaz("jdi sever");
-        assertEquals("Temná chodba", hra.getAktualniMistnost().getNazev());
+        assertEquals("Temna chodba", hra.getAktualniMistnost().getNazev());
     }
 
     @Test
@@ -41,26 +41,26 @@ public class HraTest {
 
     @Test
     public void testSberPredmetu() {
-        hra.zpracujPrikaz("vezmi paklíč");
-        assertTrue("Paklíč by měl být v batohu", hra.getBatoh().obsahujeVec("paklíč"));
-        assertNull("Paklíč už by neměl být v místnosti", hra.getAktualniMistnost().najdiPredmet("paklíč"));
+        hra.zpracujPrikaz("vezmi paklic");
+        assertTrue("Paklíč by měl být v batohu", hra.getBatoh().obsahujeVec("paklic"));
+        assertNull("Paklíč už by neměl být v místnosti", hra.getAktualniMistnost().najdiPredmet("paklic"));
     }
 
     @Test
     public void testProhraDozorce() {
-        hra.zpracujPrikaz("vezmi paklíč");
-        hra.zpracujPrikaz("použij paklíč");
+        hra.zpracujPrikaz("vezmi paklic");
+        hra.zpracujPrikaz("pouzij paklic");
         hra.zpracujPrikaz("jdi jih");
         hra.zpracujPrikaz("jdi jih");
 
-        assertEquals("Strážnice", hra.getAktualniMistnost().getNazev());
+        assertEquals("Straznice", hra.getAktualniMistnost().getNazev());
         assertTrue("Hra by měla skončit prohrou", hra.konecHry());
     }
 
     @Test
     public void testNeprenositelnyPredmet() {
-        String odpoved = hra.zpracujPrikaz("vezmi kámen");
-        assertFalse("Kámen nesmí být v batohu", hra.getBatoh().obsahujeVec("kámen"));
-        assertNotNull("Kámen musí zůstat v místnosti", hra.getAktualniMistnost().najdiPredmet("kámen"));
+        String odpoved = hra.zpracujPrikaz("vezmi kamen");
+        assertFalse("Kámen nesmí být v batohu", hra.getBatoh().obsahujeVec("kamen"));
+        assertNotNull("Kámen musí zůstat v místnosti", hra.getAktualniMistnost().najdiPredmet("kamen"));
     }
 }

@@ -3,40 +3,40 @@
     "nazev": "Cela",
     "popis": "Jsi v malé, vlhké cele. Cítíš chlad a beznaděj.",
     "vychody": {
-      "sever": "Temná chodba",
+      "sever": "Temna chodba",
       "jih": "Zbrojnice"
     }
   },
   {
-    "nazev": "Temná chodba",
+    "nazev": "Temna chodba",
     "popis": "Centrální chodba hradu. Je tu ticho, jen louče na stěnách prskají. Vedou odsud dveře na všechny strany.",
     "vychody": {
-      "sever": "Kancelář velitele",
-      "východ": "Hladomorna",
+      "sever": "Kancelar velitele",
+      "vychod": "Hladomorna",
       "jih": "Cela",
-      "západ": "Kuchyně"
+      "zapad": "Kuchyne"
     }
   },
   {
-    "nazev": "Kuchyně",
+    "nazev": "Kuchyne",
     "popis": "Místnost plná vůní, ale také špinavého nádobí. Někde tu musí být jídlo.",
     "vychody": {
-      "sever": "Spíž",
-      "východ": "Temná chodba"
+      "sever": "Spiz",
+      "vychod": "Temna chodba"
     }
   },
   {
     "nazev": "Hladomorna",
     "popis": "Slepá ulička plná kostí. Vzduch se tu tetelí, jako by tu byl duch.",
     "vychody": {
-      "západ": "Temná chodba"
+      "zapad": "Temna chodba"
     }
   },
   {
-    "nazev": "Kancelář velitele",
+    "nazev": "Kancelar velitele",
     "popis": "Luxusně vybavená místnost. Na stole jsou mapy a možná i klíč. Pozor na psa!",
     "vychody": {
-      "jih": "Temná chodba"
+      "jih": "Temna chodba"
     }
   },
   {
@@ -44,30 +44,30 @@
     "popis": "Místnost se stojany na zbraně a brnění. Cítíš olej a železo.",
     "vychody": {
       "sever": "Cela",
-      "jih": "Strážnice"
+      "jih": "Straznice"
     }
   },
   {
-    "nazev": "Strážnice",
+    "nazev": "Straznice",
     "popis": "Místnost, kde odpočívají dozorci. Jediná cesta ven vede přes ně. Doufej, že máš zbraň.",
     "vychody": {
       "sever": "Zbrojnice",
-      "východ": "Nádvoří"
+      "vychod": "Nadvori"
     }
   },
   {
-    "nazev": "Nádvoří",
+    "nazev": "Nadvori",
     "popis": "Venkovní prostor hradu. Čerstvý vzduch! Před tebou je už jen zamčená Hlavní brána.",
     "vychody": {
-      "východ": "Svoboda",
-      "západ": "Strážnice"
+      "vychod": "Svoboda",
+      "zapad": "Straznice"
     }
   },
   {
-    "nazev": "Spíž",
+    "nazev": "Spiz",
     "popis": "Malá, chladná komůrka za kuchyní. Ideální místo pro schování zásob.",
     "vychody": {
-      "jih": "Kuchyně"
+      "jih": "Kuchyne"
     }
   },
   {

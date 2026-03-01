@@ -23,7 +23,7 @@ public class PrikazJdi implements IPrikaz {
             return "Tam se odsud jít nedá";
         }
 
-        if (sousedni.getNazev().equals("Nádvoří") && !hra.getBatoh().obsahujeVec("klíč")) {
+        if (sousedni.getNazev().equals("Nadvori") && !hra.getBatoh().obsahujeVec("klic")) {
             return "Dveře jsou zamčené";
         }
 
@@ -36,15 +36,15 @@ public class PrikazJdi implements IPrikaz {
         hra.setAktualniMistnost(sousedni);
         String vypis = sousedni.dlouhyPopis();
 
-        if (sousedni.getNazev().equals("Strážnice")) {
+        if (sousedni.getNazev().equals("Straznice")) {
             Postava dozorce = sousedni.getPostava("dozorce");
-            if (dozorce != null && !hra.getBatoh().obsahujeVec("meč")) {
+            if (dozorce != null && !hra.getBatoh().obsahujeVec("mec")) {
                 hra.setKonecHry(true);
                 return vypis + "\n\n!! POZOR !!\n" +
                         dozorce.getDialog() + "\n" +
                         "Nemáš zbraň a dozorce tě chytil" +
                         "--- KONEC HRY ---";
-            } else if (dozorce != null && hra.getBatoh().obsahujeVec("meč")) {
+            } else if (dozorce != null && hra.getBatoh().obsahujeVec("mec")) {
                 return vypis + "\n\nTasíš svůj meč, cesta je volná";
             }
         }
